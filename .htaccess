@@ -1,0 +1,5 @@
+addhandler php-5.4 .php
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* img.php [L]
+
