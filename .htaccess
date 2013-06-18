@@ -1,4 +1,4 @@
-addhandler php-5.4 .php
+addhandler php-5.4 img.php
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule .* img.php [L]

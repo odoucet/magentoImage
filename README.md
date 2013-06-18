@@ -8,7 +8,7 @@ This is also useful when you have a distant storage (like NFS mount or ISCSI), a
 
 INSTALLATION
 ------------
-Install is tricky, because you'll have to replace one file in Magento core, and remove a security feature ...
+Install is tricky, because you'll have to replace one file in Magento core, and alter a security feature ...
 If you have any suggestion on how to make this hack clean, just tell me :)
 
 Copy .htaccess and img.php to media/catalog/product/cache
@@ -32,4 +32,4 @@ LIMITATIONS
 This wrapper has several limitations : 
 - it does not handle watermark addition
 - any visitor with some skill could see the original image file.
-These could be adressed with some code. If you have time to do it, I will be happy to merge ;)
+These could be adressed with some code (ie encode parameter / key for example). If you have time to do it, I will be happy to merge ;)
