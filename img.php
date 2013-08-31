@@ -60,6 +60,18 @@ $params = array (
     'path'    => $preg[5].'/'.$preg[6].'/'.$preg[7],
 );
 
+// Check Store ID (bug I can't determine origin ...)
+$storeId = Mage::app()->getStore()->getId();
+if ($params['cacheId'] != $storeId && $storeId != '') {
+    $url = str_replace(
+        '/cache/'.$params['cacheId'].'/',
+        '/cache/'.$storeId.'/', 
+        $_SERVER['REQUEST_URI']
+    );
+    Header('Location: '.$url);
+    exit;
+}
+
 parse_str(str_replace(';','&', $_SERVER['QUERY_STRING']), $args);
 $params = array_merge($args, $params);
 
